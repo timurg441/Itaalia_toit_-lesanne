@@ -1,6 +1,5 @@
 using System;
 
-// Peamenüü - kasutaja suhtlus programmiga
 class MainPage_Classidega
 {
     public static void Käivita()
