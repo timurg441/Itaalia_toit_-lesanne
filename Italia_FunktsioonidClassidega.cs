@@ -2,15 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-// Klass kõigi restorani funktsioonidega
 class Italia_FunktsioonidClassidega
 {
     static string failiTee = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Menuu.txt");
 
-    // Tuple-põhine nimekiri - nagu ülesandes nõutud
     static List<Tuple<string, string, double>> toiduNimekiri = new List<Tuple<string, string, double>>();
 
-    // Loob näidisfaili kui seda pole
     public static void LooNaidisfail()
     {
         if (!File.Exists(failiTee))
@@ -25,7 +22,6 @@ class Italia_FunktsioonidClassidega
         }
     }
 
-    // Loeb andmed failist ja täidab tuple-nimekirja
     public static void LaeAndmedFailist()
     {
         toiduNimekiri.Clear();
@@ -56,7 +52,6 @@ class Italia_FunktsioonidClassidega
         Console.WriteLine($"Laaditud {toiduNimekiri.Count} rooga.");
     }
 
-    // Kuvab menüü ilusalt joondatuna
     public static void KuvaMenuu()
     {
         Console.Clear();
@@ -92,7 +87,6 @@ class Italia_FunktsioonidClassidega
         Console.WriteLine();
     }
 
-    // Lisab uue roa käsitsi ja salvestab faili
     public static void LisaUusRoog()
     {
         Console.Write("Roa nimi: ");
@@ -110,7 +104,6 @@ class Italia_FunktsioonidClassidega
         Console.WriteLine($"Roog '{nimi}' lisatud!");
     }
 
-    // Kustutab roa nime järgi
     public static void KustutaRoog()
     {
         Console.Write("Sisesta kustutatava roa nimi: ");
@@ -130,7 +123,6 @@ class Italia_FunktsioonidClassidega
         }
     }
 
-    // Salvestab nimekirja tagasi faili
     static void SalvestaFaili()
     {
         List<string> read = new List<string>();
